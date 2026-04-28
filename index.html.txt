@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Becoming A Runner | متجر الرياضة الأول</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; text-align: center; color: #333; }
+        header { background-color: #1a237e; color: white; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .container { max-width: 600px; margin: 20px auto; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .product-img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+        h1 { margin: 10px 0; font-size: 24px; color: #1a237e; }
+        .price { font-size: 28px; color: #e91e63; font-weight: bold; margin: 10px 0; }
+        .old-price { font-size: 18px; color: #999; text-decoration: line-through; margin-right: 10px; }
+        .description { font-size: 16px; line-height: 1.6; color: #666; margin-bottom: 20px; text-align: right; }
+        form { display: flex; flex-direction: column; gap: 15px; text-align: right; }
+        input, select { padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; width: 100%; box-sizing: border-box; }
+        button { background-color: #4caf50; color: white; border: none; padding: 15px; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { background-color: #45a049; transform: scale(1.02); }
+        .badge { background: #ffeb3b; padding: 5px 10px; border-radius: 5px; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>BECOMING A RUNNER SA</h1>
+    <p>أفضل مستلزمات الجري والرياضة في السعودية</p>
+</header>
+
+<div class="container">
+    <div class="badge">🔥 الأكثر مبيعاً في الرياض وجدة</div>
+    <img src="watch.jpg" alt="ساعة رياضية ذكية" class="product-img">
+    
+    <h1>ساعة رياضية ذكية - M5 Pro Sport</h1>
+    <div class="price">119 SAR <span class="old-price">189 SAR</span></div>
+    
+    <div class="description">
+        ✅ تتبع الخطوات والسعرات الحرارية بدقة.<br>
+        ✅ قياس نبضات القلب وضغط الدم.<br>
+        ✅ تنبيهات المكالمات والرسائل (واتساب، فيسبوك).<br>
+        ✅ بطارية تدوم طويلاً وشحن سريع.<br>
+        ✅ متوافقة مع جميع الهواتف (آيفون وأندرويد).
+    </div>
+
+    <form id="orderForm">
+        <label for="name">الاسم الكامل:</label>
+        <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
+
+        <label for="phone">رقم الجوال (السعودية):</label>
+        <input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx" required>
+
+        <label for="city">المدينة:</label>
+        <select id="city" name="city" required>
+            <option value="">اختر مدينتك</option>
+            <option value="الرياض">الرياض (Riyadh)</option>
+            <option value="جدة">جدة (Jeddah)</option>
+            <option value="مكة">مكة المكرمة (Makkah)</option>
+            <option value="المدينة">المدينة المنورة (Madinah)</option>
+            <option value="الدمام">الدمام (Dammam)</option>
+            <option value="الخبر">الخبر (Khobar)</option>
+            <option value="الطائف">الطائف (Taif)</option>
+            <option value="بريدة">بريدة (Buraydah)</option>
+            <option value="تبوك">تبوك (Tabuk)</option>
+        </select>
+
+        <label for="address">العنوان الحي/الشارع:</label>
+        <input type="text" id="address" name="address" placeholder="اسم الحي والشارع" required>
+
+        <button type="submit">اضغط هنا للطلب - الدفع عند الاستلام</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('شكراً لطلبك! سنتصل بك لتأكيد الشحن إلى ' + document.getElementById('city').value);
+    });
+</script>
+
+</body>
+</html>
